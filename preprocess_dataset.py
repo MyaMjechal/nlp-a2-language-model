@@ -19,8 +19,13 @@ def merge_txt_files_to_list(folder_path):
         if file_name.endswith(".txt"):  # Check for .txt files
             file_path = os.path.join(folder_path, file_name)
             with open(file_path, "r", encoding="utf-8") as file:
-                all_text.extend(file.readlines())  # Add lines from the file
-                
+                content = file.read()  # Read the entire file content
+                # Split content into sentences based on full stops
+                sentences = re.split(r'\.\s*', content)
+                # Clean up whitespace and special characters
+                sentences = [re.sub(r'\s+', ' ', sentence).strip() for sentence in sentences if sentence]
+                # Add sentences to the list
+                all_text.extend(sentences)
     return all_text
 
 
