@@ -1,5 +1,3 @@
-# external
-pandas
-scikit-learn
-
-# internal
+flask
+torch==2.2.0
+torchtext==0.17.0

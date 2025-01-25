@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Text Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #ffd700;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('../static/images/star-wars-the-force.jpg'); /* Add your Star Wars background image URL here */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        #prompt {
+            width: 300px;
+            padding: 10px;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            border: 2px solid #ffd700;
+            background-color: #000;
+            color: #ffd700;
+        }
+        #generate-btn {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #ffd700;
+            color: #000;
+            border: none;
+            cursor: pointer;
+        }
+        #generated-text {
+            margin-top: 30px;
+            font-size: 1.5em;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Star Wars Text Generator</h1>
+    <!-- <p>May the Force be with you!</p> -->
+    <div>
+        <input type="text" id="prompt" placeholder="Enter a Star Wars prompt...">
+        <button id="generate-btn">Generate Text</button>
+    </div>
+    <div id="generated-text"></div>
+
+    <script>
+        document.getElementById("generate-btn").addEventListener("click", function() {
+            const prompt = document.getElementById("prompt").value;
+            if (!prompt) {
+                alert("Please enter a prompt.");
+                return;
+            }
+
+            fetch("/generate", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ prompt: prompt }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    alert(data.error);
+                } else {
+                    document.getElementById("generated-text").innerText = data.generated_text;
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        });
+    </script>
+</body>
+</html>
