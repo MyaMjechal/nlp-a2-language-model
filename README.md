@@ -10,7 +10,7 @@
     - [Task 3: Text Generation - Web Application Development](#task-3-text-generation---web-application-development)
 - [Installation Setup](#installation-setup)
 - [Usage](#usage)
-- [Screenshots of Website Working](#screenshots-of-website-working)
+- [Demo and Screenshots of Website Working](#demo-and-screenshots-of-website-working)
 - [Result](#result)
 
 ## Student Information
@@ -109,12 +109,16 @@ Once the Python application is running, you can access the text generation web a
 1. Input a text prompt into the input box (e.g., "Luke is").
 2. The web application will use the trained language model to generate and display a continuation of the input text.
 
-## Screenshots of Website Working
+## Demo and Screenshots of Website Working
 ![Website Screenshot 1](images/star-wars-3.png)
 _Figure 1: Initial page of the Star Wars text generator website_
 
 ![Website Screenshot 2](images/star-wars-4.png)
 _Figure 2: Result of Star Wars story line generation with initial phrase 'Luke is'_
+
+### Demo Video
+![Demo Video](images/star-wars-demo.mp4)
+_Video 1: Demonstration of the Star Wars text generator web application in action_
 
 ## Result
 - Training perplexity - 40.594
