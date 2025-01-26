@@ -37,17 +37,15 @@ This project is based on the class assignment detailed in the [`A2_Language_Mode
 ### Task 1: Dataset Acquisition
 The dataset chosen for this project is the Star Wars Scripts Database available on Kaggle. This dataset contains transcripts from the Star Wars movie series, which is a text-rich source suitable for language modeling.
 
-**Title:** Star Wars Scripts Database
-
-**Creator:** Oscar Yezfeijo
-
-**Source:** [`Kaggle - Star Wars Scripts Database`](https://www.kaggle.com/datasets/oscaryezfeijo/star-wars-scripts-database)
-
-**License:** Open Database (ODbL) for the database, Database Contents under Database Contents License. Check [`Kaggle Licensing Information`](https://opendatacommons.org/licenses/dbcl/1-0/) for details.
+- **Title:** Star Wars Scripts Database
+- **Creator:** Oscar Yezfeijo
+- **Source:** [`Kaggle - Star Wars Scripts Database`](https://www.kaggle.com/datasets/oscaryezfeijo/star-wars-scripts-database)
+- **License:** Open Database (ODbL) for the database, Database Contents under Database Contents License. Check [`Kaggle Licensing Information`](https://opendatacommons.org/licenses/dbcl/1-0/) for details.
 
 ### Task 2: Model Training
 
 1. **Preprocessing the Text Data**
+
     The dataset was preprocessed using the following steps:
     - **Data Collection:** 10 text files from Kaggle were collected.
     - **Special Character Removal:** Non-text characters were removed.
@@ -56,6 +54,7 @@ The dataset chosen for this project is the Star Wars Scripts Database available 
     - **Data Splitting:** The dataset was split into training, validation, and test sets using `split_star_wars_dataset.ipynb` and uploaded to Hugging Face.
 
 2. **Model Architecture and Training Process**
+
     The language model is built using a Recurrent Neural Network (RNN) architecture with Long Short-Term Memory (LSTM) layers. The architecture includes:
 
     - **Embedding Layer:** Converts word indices to word embeddings.
@@ -118,8 +117,6 @@ _Figure 1: Initial page of the Star Wars text generator website_
 _Figure 2: Result of Star Wars story line generation with initial phrase 'Luke is'_
 
 ## Result
-Training perplexity - 40.594
-
-Validation perplexity - 77.044
-
-Testing perplexity - 77.599
+- Training perplexity - 40.594
+- Validation perplexity - 77.044
+- Testing perplexity - 77.599
