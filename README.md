@@ -116,9 +116,9 @@ _Figure 1: Initial page of the Star Wars text generator website_
 ![Website Screenshot 2](images/star-wars-4.png)
 _Figure 2: Result of Star Wars story line generation with initial phrase 'Luke is'_
 
-### Demo Video
-![Demo Video](images/star-wars-demo.mp4)
-_Video 1: Demonstration of the Star Wars text generator web application in action_
+### Demo GIF
+![Demo GIF](images/star-wars-demo.gif)
+_GIF 1: Demonstration of the Star Wars text generator web application in action_
 
 ## Result
 - Training perplexity - 40.594
