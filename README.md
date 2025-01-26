@@ -51,7 +51,7 @@ The dataset chosen for this project is the Star Wars Scripts Database available 
     - **Special Character Removal:** Non-text characters were removed.
     - **Line Separation:** Text was separated line by line.
     - **CSV Conversion:** The cleaned text was converted into a single CSV file using `preprocess_dataset.py`.
-    - **Data Splitting:** The dataset was split into training, validation, and test sets using `split_star_wars_dataset.ipynb` and uploaded to Hugging Face.
+    - **Data Splitting:** The dataset was split into training, validation, and test sets using `split_star_wars_dataset.ipynb` and uploaded to [`Hugging Face`](https://huggingface.co/datasets/myamjechal/star-wars-dataset).
 
 2. **Model Architecture and Training Process**
 
