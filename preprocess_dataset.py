@@ -57,13 +57,12 @@ def preprocess_text_to_csv(lines, output_csv_path):
     print(f"Processed CSV saved at: {output_csv_path}")
 
 
-# Example usage
 if __name__ == "__main__":
     # Path to the folder containing .txt files
     folder_path = "data"
     # Path to save the output CSV file
     output_csv_path = "data/star_wars_dataset.csv"
-    
+
     # Step 1: Merge .txt files
     merged_lines = merge_txt_files_to_list(folder_path)
     # Step 2: Preprocess and save to CSV
